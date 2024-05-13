@@ -1,3 +1,10 @@
+Modified from: https://github.com/slackhq/simple-kubernetes-webhook
+
+Mutates pod creations in the `apps` namespace to change their container images to `ubuntu` if the container name is `mutateme`. Main modifications are in [replaceimage.go](pkg/mutation/replaceimage.go).
+
+
+---
+
 # simple-kubernetes-webhook
 
 This is a simple [Kubernetes admission webhook](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/). It is meant to be used as a validating and mutating admission webhook only and does not support any controller logic. It has been developed as a simple Go web service without using any framework or boilerplate such as kubebuilder.

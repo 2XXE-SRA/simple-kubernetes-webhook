@@ -23,6 +23,7 @@ spec:
         - image: simple-kubernetes-webhook:latest
           imagePullPolicy: Never
           name: simple-kubernetes-webhook
+          command: ["/usr/local/bin/admission-webhook"]
           env:
             - name: TLS
               value: "true"

@@ -12,7 +12,7 @@ build:
 .PHONY: docker-build
 docker-build:
 	@echo "\n📦 Building simple-kubernetes-webhook Docker image..."
-	docker build -t simple-kubernetes-webhook:latest .
+	docker build --network=host -t simple-kubernetes-webhook:latest .
 
 # From this point `kind` is required
 .PHONY: cluster
